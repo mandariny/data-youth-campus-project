@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Testing</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <!--<script src="change_img.js"></script>-->
+        <script src="select_db.js"></script>
+		<style>
+			.box-solid {
+			border-style: solid;
+			border-color:#EE5050;
+			background-color:white;
+			width:50%;
+			height:80%;
+			}
+			.backgroudim{
+			background-image:url('backgroundimg.jpg');
+			background-repeat:no-repeat;
+			background-size:100%
+			}
+		</style>
+    </head>
+    <body>
+        <header class="ant-layout-header" style="background-color : transparent;">
+			<a class="logo" href="/Users/whtnd/html">
+				<img src = "./wearly.png" width="7%">
+			</a>
+		</header>
+		<br>
+		<div class="backgroudim"><br>
+        <main>
+		<center>
+			<div class="box-solid">
+            <h1>선호하는 스타일 및 본인의 퍼스널 컬러를 선택하세요</h1>
+            <form action="result" method="post" onsubmit="">
+            
+                <h2><label for="category">Choose a style:</label>
+                <select name="category" id="category" style="width=100;height:40;">
+                    <option value="street" style="font-size:20px">Street</option>
+                    <option value="classic" style="font-size:20px">Classic</option>
+                    <option value="feminine" style="font-size:20px">Feminine</option>
+                    <option value="casual" style="font-size:20px">Casual</option>
+                    <option value="minimal" style="font-size:20px">Minimal</option>
+                    <option value="modern" style="font-size:20px">Modern</option>
+                </select>
+                <br><br>
+                <labe. for="personal_color">Choose a Personal Color:</labe>
+                <select name="personal_color" id="personal_color" style="width=100;height:40;">
+                    <option value="spring" style="font-size:20px">Spring Warm</option>
+                    <option value="summer" style="font-size:20px">Summer Cool</option>
+                    <option value="autumn" style="font-size:20px">Autumn Warm</option>
+                    <option value="winter" style="font-size:20px">Winter Cool</option>
+                </select></h2>
+                <br><br>
+
+                <!--<button class="submit" style="background-color:#EE5050; width:90%; height:5%;">Submit</button>-->
+                <input type="submit" value="Submit"><br><br>
+            </form>
+
+            <section class="trend_imgs">
+                <h1>Trend/Recommend</h1>
+                <SCRIPT language="JavaScript">
+                    let root = "C:/Users/YoonSohee/Downloads/validation/validation/image/";
+                    let urls = [root+'000001.jpg', root+'000003.jpg', root+'000005.jpg'];
+                </SCRIPT>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img id="img1" src="" style="width:100%">
+                        <script>document.getElementById('img1').src=urls[1]</script>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img id="img2" src="" style="width:100%">
+                        <script>document.getElementById('img2').src=urls[2]</script>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img id="img3" src="" style="width:100%">
+                        <script>document.getElementById('img3').src=urls[0]</script>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>  
+            </section>
+			</div>
+		</center>
+        </main>
+		</div>
+        <script src="slide.js"></script>
+        <script src="show_img.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+}
+
+#title {
+  font-size: 35px;
+}
+#title2 {
+  font-size: 23px;
+  margin-top: 10px;
+}
+
+input {
+  width: 20px;
+  height: 20px;
+}
+
+label {
+  font-size: 20px;
+  text-align: center;
+}
+
+.title_box {
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  margin: 20px;
+  width: 8%;
+}
+.radio {
+  padding-top: 8%;
+}
+.retry {
+  background-color: #ee5050;
+  font-size: 50px;
+  padding: 5px 20px;
+  width: 30%;
+  height: 8%;
+  border: none;
+  border-radius: 12px;
+  margin-top: 15%;
+  font-size: 30px;
+  color: white;
+}
+.backgroud_img {
+  background-image: url("./backgroundimg.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.box-solid {
+  border-style: solid;
+  border-color: #ee5050;
+  background-color: white;
+  width: 50%;
+  height: 80%;
+  min-width: 850px;
+  min-height: 800px;
+}
+
+.ant-layout-header {
+  background-color: transparent;
+}
+
+.ant-spac-item {
+  margin-bottom: 16px;
+}
+
+.illust_box {
+  text-align: center;
+}
+
+.illust {
+  width: 80%;
+}
+
+main {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  background-image: url("./backgroundimg.jpg");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+.start_btn {
+  background-color: #ee5050;
+  font-size: 50px;
+  padding: 5px 20px;
+  width: 30%;
+  height: 8%;
+  border: none;
+  border-radius: 12px;
+  margin: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+input[type="radio"] {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+input[type="radio"] + label {
+  margin: 0;
+  padding: 0.75em 1.5em;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #ddd;
+  background-color: #fff;
+  line-height: 140%;
+  text-align: center;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: border-color 0.15s ease-out, color 0.25s ease-out,
+    background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+  cursor: pointer;
+}
+input[type="radio"]:checked + label {
+  background-color: #4b9dea;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(102, 179, 251, 0.5);
+  border-color: #4b9dea;
+  z-index: 1;
+}
