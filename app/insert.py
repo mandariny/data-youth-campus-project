@@ -4,41 +4,39 @@ import numpy as np
 import os
 
 mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="+Wl-*oe;u7Mp",
-  database="wearly"
+        host="localhost",
+        user="root",
+        password="+Wl-*oe;u7Mp",
+        database="wearly"
 )
 
 mycursor = mydb.cursor()
-path = 'resource/csv_files'
+path = '../resource/csv_files'
 
 for i in range(len(os.listdir(path))):
-    #try:
         csv_file = pd.read_csv(path+"/"+os.listdir(path)[i])
-        csv_file = csv_file.drop(columns=['crop_image'])
+    
         csv_file = csv_file.values.tolist()
-        #var=[];
-        style = os.listdir(path)[i].split("_")[-1].split(".")[0]
 
-        for i in range(50):
-            csv_file[i].append(style);
-            #csv_file[i] = tuple(csv_file[i])
-            var=tuple(csv_file[i])
+        style = os.listdir(path)[i].split(".")[0].split("_")[1]
 
-            sql = "INSERT INTO images (item, name, color, personal, style) VALUES (%s, %s, %s, %s, %s)"
-            #val = ("pants", "88.jpg", "red", "warm")
-            mycursor.execute(sql, var)
+        for j in range(len(csv_file)):
+            csv_file[j].append(style)
+            csv_file[j]=tuple(csv_file[j])
+            
+        print(csv_file[0])
 
-            mydb.commit()
-        #print(csv_file);
+
+        
+        sql = "INSERT INTO images (crop_image, item, name, color, personal, final_color, style) VALUES(%s, %s, %s, %s, %s,  %s, %s)"
+        mycursor.executemany(sql, csv_file)
+
+        mydb.commit()
+
 
 
         print(mycursor.rowcount, "record inserted.")
-        #print(len(csv_file))
-    #except:
-    #    print("error")
-    #    continue
 
-# for i in range(len(os.listdir('resource/csv_files'))):
-#     print(os.listdir('resource/csv_files')[i].split("_")[-1].split(".")[0])
+'''
+csv_file = pd.read_csv(path+"/"+"feminine.csv")
+print(csv_file.columns)'''
