@@ -1,13 +1,16 @@
+from dotenv import load_dotenv
 import mysql.connector
 import pandas as pd
 import numpy as np
 import os
 
+load_dotenv(dotenv_path="../.env")
+
 mydb = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="+Wl-*oe;u7Mp",
-        database="wearly"
+        password=os.environ.get('DB_PASSWORD'),
+        database=os.environ.get('DB_NAME')
 )
 
 mycursor = mydb.cursor()

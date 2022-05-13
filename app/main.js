@@ -1,7 +1,10 @@
+require('dotenv').config({ path: '../.env' })
+
 const express = require('express');
 const app = express();
 const path = require('path');
 const static = require('serve-static');
+
 let url = require('url');
 let qs = require('querystring');
 let mysql = require('mysql');
@@ -9,8 +12,8 @@ let mysql = require('mysql');
 let con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "+Wl-*oe;u7Mp",
-  database: "wearly"
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 });
 con.connect();
 

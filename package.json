@@ -1,4 +1,8 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mandariny/data-youth-campus-project.git"
+  },
   "requires": true,
   "lockfileVersion": 1,
   "dependencies": {
@@ -144,6 +148,7 @@
       "resolved": "https://registry.npmjs.org/destroy/-/destroy-1.0.4.tgz",
       "version": "1.0.4"
     },
+    "dotenv": "^16.0.1",
     "ee-first": {
       "integrity": "sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=",
       "resolved": "https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz",
@@ -333,6 +338,7 @@
       "resolved": "https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz",
       "version": "1.3.3"
     },
+    "path": "^0.12.7",
     "path-to-regexp": {
       "integrity": "sha1-32BBeABfUi8V60SQ5yR6G/qmf4w=",
       "resolved": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.1.7.tgz",
@@ -343,6 +349,7 @@
       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
       "version": "2.0.1"
     },
+    "properties-reader": "^2.2.0",
     "proxy-addr": {
       "integrity": "sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==",
       "requires": {

@@ -90,7 +90,7 @@ module.exports = {
         let urls = [];
 	console.log(names);
         for(var i=0; i<names.length;i++){
-            urls.push("insta5/"+style+"/"+names[i]);
+            urls.push("images/"+style+"/"+names[i]);
         }
 
         var tem = `
